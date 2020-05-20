@@ -1,12 +1,9 @@
 package br.com.senior.sam.portaria.pojos;
 
 import java.time.Instant;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class Procedure {
+public class Procedure extends CustomDTO {
 
     /**
      * ID
@@ -39,8 +36,6 @@ public class Procedure {
 
     private List<JsonPatch> jsonPatches;
 
-    private Map<String, Object> custom;
-
     public Procedure() {
     }
 
@@ -70,40 +65,5 @@ public class Procedure {
 
     public List<JsonPatch> getJsonPatches(){
         return jsonPatches == null ? java.util.Collections.emptyList() : jsonPatches;
-    }
-
-    /**
-     * Sets the value of a custom field.
-     *
-     * @param field name of the field
-     * @param value value of the field
-     */
-    public void setCustom(String field, Object value) {
-        if (custom == null) {
-            custom = new HashMap<>();
-        }
-        custom.put(field, value);
-    }
-
-    /**
-     * Returns the value of the custom field.
-     *
-     * @param field name of the field
-     * @return value of the field, or <code>null</code> if the field is not present
-     */
-    public Object getCustom(String field) {
-        if (custom != null) {
-            return custom.get(field);
-        }
-        return custom;
-    }
-
-    /**
-     * Returns the map with all custom fields set.
-     *
-     * @return map with the custom fields
-     */
-    public Map<String, Object> getCustom() {
-        return custom != null ? Collections.unmodifiableMap(custom) : Collections.emptyMap();
     }
 }
