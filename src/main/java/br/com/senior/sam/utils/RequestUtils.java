@@ -1,10 +1,5 @@
 package br.com.senior.sam.utils;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.Optional;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpPost;
@@ -12,11 +7,14 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 
-import com.google.gson.Gson;
-
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.util.EntityUtils;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.Optional;
 
 
 /**
@@ -32,7 +30,7 @@ public class RequestUtils {
      * @param token AccessToken de authenticação.
      * @throws ServiceException Caso serviço esteja fora ou HTTP Status Code de retorno seja diferente de 2xx.
      */
-    public static void delete(String url, String token) throws ServiceException {
+    public void delete(String url, String token) throws ServiceException {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
             HttpResponse response = executeDelete(url, client, token);
             int statusCode = response.getStatusLine().getStatusCode();
@@ -56,7 +54,7 @@ public class RequestUtils {
      * @return - Payload de saída
      * @throws ServiceException - Erro tratado de serviço
      */
-    public static <T> T execute(String url, Object payload, String token, String tenant, Class<T> clazz) throws ServiceException {
+    public <T> T execute(String url, Object payload, String token, String tenant, Class<T> clazz) throws ServiceException {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
             HttpResponse response = executePost(url, payload, client, token, tenant);
             return readResponse(response, clazz);
@@ -81,7 +79,7 @@ public class RequestUtils {
         post.setHeader("Content-Type", "application/json");
         Optional.ofNullable(tenant).ifPresent(t -> post.setHeader("X-Tenant", t));
         Optional.ofNullable(token).ifPresent(t -> post.setHeader("Authorization", String.format("Bearer %s", t)));
-        StringEntity userEntity = new StringEntity(new Gson().toJson(payload));
+        StringEntity userEntity = new StringEntity(SeniorGsonBuilder.newGsonBuilder().toJson(payload));
         post.setEntity(userEntity);
         return client.execute(post);
     }
@@ -102,7 +100,7 @@ public class RequestUtils {
             String body = EntityUtils.toString(response.getEntity());
             throw new ServiceException(statusCode, body);
         }
-        return new Gson().fromJson(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.ISO_8859_1), clazz);
+        return SeniorGsonBuilder.newGsonBuilder().fromJson(new InputStreamReader(response.getEntity().getContent(), StandardCharsets.ISO_8859_1), clazz);
     }
 
     /**
@@ -111,9 +109,9 @@ public class RequestUtils {
      * @param client Cliente HTTP.
      * @param token Access Token obtido na authenticação.
      * @return Resposta HTTP.
-     * @throws IOException
+     * @throws IOException Erro de comunicação
      */
-    private static HttpResponse executeDelete(String url, CloseableHttpClient client, String token) throws IOException {
+    private HttpResponse executeDelete(String url, CloseableHttpClient client, String token) throws IOException {
         HttpDelete delete = new HttpDelete(url);
         delete.setHeader("Content-Type", "application/json");
         Optional.ofNullable(token).ifPresent(t -> delete.setHeader("Authorization", String.format("Bearer %s", t)));

@@ -1,7 +1,5 @@
 package br.com.senior.sam.portaria.pojos;
 
-import lombok.Builder;
-
 import java.time.Instant;
 import java.util.List;
 

@@ -8,7 +8,6 @@ import org.junit.Test;
 import br.com.senior.sam.utils.ServiceException;
 
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalAmount;
 import java.util.Collections;
 import java.util.Date;
 
@@ -20,7 +19,7 @@ public class PortariaIT {
     private static PortariaClient client;
 
     @BeforeClass
-    public static void beforeClass() throws ServiceException {
+    public static void beforeClass() {
         client = new PortariaClient(System.getenv("TOKEN"), Environment.PROD);
     }
 
