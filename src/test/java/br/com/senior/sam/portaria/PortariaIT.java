@@ -1,11 +1,11 @@
 package br.com.senior.sam.portaria;
 
+import br.com.senior.core.base.Environment;
+import br.com.senior.core.base.ServiceException;
 import br.com.senior.sam.portaria.pojos.*;
-import br.com.senior.sam.utils.Environment;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import br.com.senior.sam.utils.ServiceException;
 
 import java.time.temporal.ChronoUnit;
 import java.util.Collections;

@@ -246,6 +246,11 @@
             <version>1.18.12</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>br.com.senior</groupId>
+            <artifactId>senior-core-java</artifactId>
+            <version>0.7.0</version>
+        </dependency>
     </dependencies>
 
 </project>

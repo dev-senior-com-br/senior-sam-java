@@ -1,12 +1,12 @@
 package br.com.senior.sam.portaria;
 
+import br.com.senior.core.base.BaseClient;
+import br.com.senior.core.base.Environment;
+import br.com.senior.core.base.ServiceException;
 import br.com.senior.sam.portaria.pojos.CreatePersonProvisoryCredential;
 import br.com.senior.sam.portaria.pojos.CreateVisitorProvisoryCredential;
 import br.com.senior.sam.portaria.pojos.ProvisoryCredentialRecord;
-import br.com.senior.sam.utils.BaseClient;
 import br.com.senior.sam.utils.EndpointPath;
-import br.com.senior.sam.utils.Environment;
-import br.com.senior.sam.utils.ServiceException;
 
 /**
  * Cliente do serviço de  <a href="https://dev.senior.com.br/apis/sam_portaria">Portaria</a>
