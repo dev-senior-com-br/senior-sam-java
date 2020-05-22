@@ -2,6 +2,8 @@ package br.com.senior.sam.portaria;
 
 import br.com.senior.core.base.Environment;
 import br.com.senior.core.base.ServiceException;
+import br.com.senior.core.entities.EntityPage;
+import br.com.senior.sam.aplicacao.pojos.Credential;
 import br.com.senior.sam.portaria.pojos.*;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -63,4 +65,5 @@ public class PortariaIT {
         ProvisoryCredentialRecord output = client.createVisitorProvisoryCredentialCard(input);
         Assert.assertNotNull(output);
     }
+
 }
