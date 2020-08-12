@@ -21,6 +21,25 @@ Esta biblioteca permite desenvolvedores criar integrações das APIs do SAM da S
     ...
   ```
 
+### Ambiente
+
+Atualmente o ambiente padrão para o desenvolvimento é o da Homologx.
+Para fazer a troca do ambiente basta chamar o construtor da api passando um dos Environments configurados:
+
+```java
+public enum Environment {
+
+    PROD("https://api.senior.com.br"),
+    HOMOLOG("https://platform-homologx.senior.com.br/t/senior.com.br/bridge/1.0");
+
+    private final String url;
+
+    Environment(String url) {
+        this.url = url;
+    }
+}
+```
+
 ## Exemplo Rápido
 
 Implementamos no pacote **/src/test/java/br/com/senior/sam** um conjunto de testes de integração para cada serviço. Alguns serviços dependem de variáveis que precisam ser informadas pelos usuários, como login e senha para efetuar o login.
@@ -39,6 +58,13 @@ Utilizando como exemplo o login, caso a aplicação queira efetuar o login integ
     LoginOutput output = client.login(new LoginInput(username, password));
     ...
 ```
+
+Para mudar o ambiente para produção é necessário informar o environment ao chamar o construtor do Client:
+
+```java
+  AuthenticationClient client = new AuthenticationClient(Environment.PROD);
+```
+
 Definir as seguintes variáveis de ambiente:
 
 ```
