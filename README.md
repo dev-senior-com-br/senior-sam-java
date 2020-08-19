@@ -74,6 +74,12 @@ TENANT_NAME=<nome_do_tenant>
 TENANT_DOMAIN=<dominio_do_tenant>
 ```
 
-### Suporte
+## [Guia de contribuição](https://dev.senior.com.br/guia-de-contribuicao/)
 
-1. Criar um issue https://github.com/dev-senior-com-br/senior-sam-java/issues
+## Suporte
+
+Criar um issue https://github.com/dev-senior-com-br/senior-sam-java/issues
+
+## License
+
+Copyright © 2020.
