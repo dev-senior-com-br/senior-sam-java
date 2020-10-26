@@ -13,25 +13,12 @@
 
 package br.com.senior.sam.application.pojos;
 
+import java.time.OffsetDateTime;
 import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
+
 import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.sam.application.pojos.AccessCallOrigin;
-import br.com.senior.sam.application.pojos.AccessCallStatus;
-import br.com.senior.sam.application.pojos.InputDeviceAccessCall;
-import br.com.senior.sam.application.pojos.ReaderDeviceAccessCall;
-import br.com.senior.sam.application.pojos.VirtualLobby;
-import br.com.senior.sam.application.pojos.VirtualLobbyMovement;
-import br.com.senior.sam.application.pojos.VirtualLobbyMovementType;
-import br.com.senior.sam.application.pojos.VisitAccessCall;
-import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
 
 /**
  * AccessCall

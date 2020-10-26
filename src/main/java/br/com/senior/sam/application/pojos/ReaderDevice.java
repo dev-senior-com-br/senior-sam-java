@@ -13,33 +13,13 @@
 
 package br.com.senior.sam.application.pojos;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.sam.application.pojos.BiometricManufacturer;
-import br.com.senior.sam.application.pojos.BiometricOneToOneValidationType;
-import br.com.senior.sam.application.pojos.BiometricValidation;
-import br.com.senior.sam.application.pojos.Device;
-import br.com.senior.sam.application.pojos.DeviceCommunicationStatus;
-import br.com.senior.sam.application.pojos.DeviceSituation;
-import br.com.senior.sam.application.pojos.DeviceType;
-import br.com.senior.sam.application.pojos.ExtensibleConfiguration;
-import br.com.senior.sam.application.pojos.PhysicalLocation;
-import br.com.senior.sam.application.pojos.ReaderDevice;
-import br.com.senior.sam.application.pojos.ReaderDeviceAction;
-import br.com.senior.sam.application.pojos.ReaderDeviceCardFormat;
-import br.com.senior.sam.application.pojos.ReaderDeviceTechnology;
-import br.com.senior.sam.application.pojos.ReaderDirection;
-import br.com.senior.sam.application.pojos.ReaderValidationType;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import com.google.gson.annotations.SerializedName;
+
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ReaderDevice

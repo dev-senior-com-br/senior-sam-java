@@ -13,35 +13,16 @@
 
 package br.com.senior.sam.application.pojos;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.sam.application.pojos.Biometry;
-import br.com.senior.sam.application.pojos.Credential;
-import br.com.senior.sam.application.pojos.Document;
-import br.com.senior.sam.application.pojos.Email;
-import br.com.senior.sam.application.pojos.Gender;
-import br.com.senior.sam.application.pojos.GroupPerson;
-import br.com.senior.sam.application.pojos.OrganizationalStructurePerson;
-import br.com.senior.sam.application.pojos.PersonRole;
-import br.com.senior.sam.application.pojos.PersonSituation;
-import br.com.senior.sam.application.pojos.PersonSituationType;
-import br.com.senior.sam.application.pojos.PersonVehicle;
-import br.com.senior.sam.application.pojos.PersonWorkSchedulePeriod;
-import br.com.senior.sam.application.pojos.Phone;
-import br.com.senior.sam.application.pojos.PhysicalLocation;
-import br.com.senior.sam.application.pojos.User;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 import org.threeten.bp.LocalDate;
 import org.threeten.bp.OffsetDateTime;
+
+import com.google.gson.annotations.SerializedName;
+
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Person

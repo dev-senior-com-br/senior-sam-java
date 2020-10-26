@@ -1,17 +1,21 @@
 package br.com.senior.sam.portaria;
 
-import br.com.senior.core.base.Environment;
-import br.com.senior.core.base.ServiceException;
-import br.com.senior.core.entities.EntityPage;
-import br.com.senior.sam.aplicacao.pojos.Credential;
-import br.com.senior.sam.portaria.pojos.*;
+import java.time.temporal.ChronoUnit;
+import java.util.Collections;
+import java.util.Date;
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.time.temporal.ChronoUnit;
-import java.util.Collections;
-import java.util.Date;
+import br.com.senior.core.base.Environment;
+import br.com.senior.core.base.ServiceException;
+import br.com.senior.sam.portaria.pojos.CardTechnology;
+import br.com.senior.sam.portaria.pojos.CreatePersonProvisoryCredential;
+import br.com.senior.sam.portaria.pojos.CreateVisitorProvisoryCredential;
+import br.com.senior.sam.portaria.pojos.InformationCardCredentialRecord;
+import br.com.senior.sam.portaria.pojos.ProvisoryCredentialRecord;
+import br.com.senior.sam.portaria.pojos.Visitor;
 
 /**
  * Exemplos de código do {@link PortariaClient PortariaClient}

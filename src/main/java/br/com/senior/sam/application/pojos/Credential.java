@@ -13,34 +13,15 @@
 
 package br.com.senior.sam.application.pojos;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.sam.application.pojos.AccessCall;
-import br.com.senior.sam.application.pojos.Biometry;
-import br.com.senior.sam.application.pojos.CardCredential;
-import br.com.senior.sam.application.pojos.CredentialFormat;
-import br.com.senior.sam.application.pojos.CredentialOwner;
-import br.com.senior.sam.application.pojos.CredentialSituation;
-import br.com.senior.sam.application.pojos.CredentialType;
-import br.com.senior.sam.application.pojos.Group;
-import br.com.senior.sam.application.pojos.Lobby;
-import br.com.senior.sam.application.pojos.Person;
-import br.com.senior.sam.application.pojos.Role;
-import br.com.senior.sam.application.pojos.Scheduling;
-import br.com.senior.sam.application.pojos.StatusHistoric;
-import br.com.senior.sam.application.pojos.Vehicle;
-import br.com.senior.sam.application.pojos.VirtualLobby;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 import org.threeten.bp.OffsetDateTime;
+
+import com.google.gson.annotations.SerializedName;
+
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Credential

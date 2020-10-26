@@ -13,29 +13,13 @@
 
 package br.com.senior.sam.application.pojos;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import br.com.senior.sam.application.pojos.Device;
-import br.com.senior.sam.application.pojos.DeviceCommunicationStatus;
-import br.com.senior.sam.application.pojos.DeviceSituation;
-import br.com.senior.sam.application.pojos.DeviceType;
-import br.com.senior.sam.application.pojos.ExtensibleConfiguration;
-import br.com.senior.sam.application.pojos.IncidentPriority;
-import br.com.senior.sam.application.pojos.IncidentType;
-import br.com.senior.sam.application.pojos.InputMasking;
-import br.com.senior.sam.application.pojos.InputState;
-import br.com.senior.sam.application.pojos.OutputDeviceActivations;
-import br.com.senior.sam.application.pojos.PhysicalLocation;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import com.google.gson.annotations.SerializedName;
+
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * InputDevice
