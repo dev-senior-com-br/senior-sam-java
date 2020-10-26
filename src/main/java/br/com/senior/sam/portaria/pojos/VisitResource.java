@@ -1,7 +1,7 @@
 package br.com.senior.sam.portaria.pojos;
 
 import java.time.Instant;
-import java.util.*;
+import java.util.List;
 
 public class VisitResource extends CustomDTO {
 
