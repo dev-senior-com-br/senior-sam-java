@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2020-11-24
+
 ### Changed
-- Atualização dos POJOs das entidades do `sam/application`
+
+-   Atualização dos POJOs das entidades do `sam/application`
 
 ## [0.2.0] - 2020-08-17
 
@@ -20,6 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-[Unreleased]: https://github.com/dev-senior-com-br/senior-sam-java/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/dev-senior-com-br/senior-sam-java/compare/0.3.0...HEAD
+
+[0.3.0]: https://github.com/dev-senior-com-br/senior-sam-java/compare/0.2.0...0.3.0
 
 [0.2.0]: https://github.com/dev-senior-com-br/senior-sam-java/releases/tag/v0.2.0
